@@ -1,6 +1,5 @@
 # Swift-ios-13-Apps
 
-# Project Title
 
 One Paragraph of project description goes here
 
