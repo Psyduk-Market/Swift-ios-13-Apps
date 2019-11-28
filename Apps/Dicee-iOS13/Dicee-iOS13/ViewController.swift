@@ -15,18 +15,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // who.what(property of "who") = ("image literal")
-        // Double click on the icon to select the image you want
-//        diceImageView1.image = #imageLiteral(resourceName: "DiceSix")
-        
+
     }
     
     // Declare/link/connect action element from Storyboard
     @IBAction func rollButton(_ sender: UIButton) {
         
-        diceImageView1.image = [#imageLiteral(resourceName: "DiceOne") , #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")][Int.random(in: 0..<6)]
-        diceImageView2.image = [#imageLiteral(resourceName: "DiceOne") , #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")][Int.random(in: 0..<6)]
+        let faces = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
+        
+        // who.what(property of "who") = ("image literal")
+        // Double click on the icon to select the image you want
+        diceImageView1.image = faces.randomElement()
+        diceImageView2.image = faces.randomElement()
                 
     }
 
